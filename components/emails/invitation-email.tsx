@@ -195,7 +195,7 @@ const InvitationEmail = (props: any) => {
                     padding: "16px 32px",
                     textAlign: "center",
                     display: "inline-block",
-                    width: "100%",
+                    width: "90%",
                   }}
                 >
                   <Link href={signupLink} style={{ textDecoration: "none" }}>

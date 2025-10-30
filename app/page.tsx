@@ -62,6 +62,11 @@ export default function Home() {
       slug: "welcome-mail",
       description: "Welcome to the event",
     },
+    {
+      name: "Payment Complete ",
+      slug: "complete-payment",
+      description: "Welcome to the payroll system",
+    },
   ];
 
   return (

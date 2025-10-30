@@ -11,27 +11,25 @@ import {
   Hr,
   Row,
   Column,
-  Tailwind,
   Img,
+  Tailwind,
   Link,
 } from "@react-email/components";
 
-const WelcomeEmail = (props: any) => {
+const CompletePayment = (props: any) => {
   const {
-    attendeeName = "John Doe",
-    eventName = "Tech Conference 2024",
+    userName = "John Doe",
+    eventName = "Tech Innovation Summit 2024",
     eventDate = "December 15, 2024",
-    eventTime = "9:00 AM - 6:00 PM IST",
-    venue = "Convention Center, Sector 17, Chandigarh",
-    ticketNumber = "TC2024-001234",
-    orderNumber = "ORD-789456123",
-    ticketType = "Premium Pass",
-    purchaseDate = "November 20, 2024",
-    totalAmount = "₹2,500",
-    organizerName = "Tech Conference Team",
-    eventWebsite = "www.techconference2024.com",
-    socialHandle = "@TechConf2024",
-    otp = "90991",
+    eventTime = "10:00 AM - 6:00 PM IST",
+    eventLocation = "Chandigarh Convention Center, Punjab",
+    eventDescription = "Join 500+ tech leaders, innovators, and entrepreneurs for a day of cutting-edge insights, networking, and breakthrough technologies.",
+    signupLink = "https://techsummit2024.com/signup",
+    eventDetailsLink = "https://techsummit2024.com/details",
+    hostName = "Tech Innovation Group",
+    contactEmail = "events@techinnovation.com",
+    eventImage = "https://new.email/static/app/placeholder.png",
+    rsvpDeadline = "December 10, 2024",
   } = props;
 
   return (
@@ -86,18 +84,16 @@ const WelcomeEmail = (props: any) => {
             }
           }
         `}</style>
-         {/* email subject */}
       </Head>
       <Preview>
-        Welcome to {eventName}! Your journey to an amazing experience starts
-        here
+        We want to see you again! {eventName} - {eventDate}
       </Preview>
       <Tailwind>
         <Body className="bg-[#0A0A0A] font-sans py-[40px] px-[20px]">
           <Container className="bg-[#0A0A0A] mx-auto max-w-[600px]">
             <Section
               className="mb-[40px] "
-               style={{
+              style={{
                 border: "1px solid #FFFFFF13",
                 padding: "16px",
                 borderRadius: "50px",
@@ -156,73 +152,90 @@ const WelcomeEmail = (props: any) => {
               </Row>
             </Section>
 
-            {/* Email Verification Section */}
-            <Section
-              className=" border border-[#FFFFFF13] rounded-[12px] mb-[24px] text-start"
-              style={{ padding: "32px 20px" }}
-            >
-              <Text
-                className="text-white text-[32px] font-normal mb-[20px] text-large-responsive"
-                style={{ margin: "0 0 20px 0" }}
-              >
-                Welcome to Avenue
+            {/* Main Content */}
+            <Section className="mb-[40px]">
+              <Text className="text-white text-[34px] font-normal leading-[1.2]  mt-0 heading-responsive">
+                Complete Your Payment Setup
               </Text>
-              <Text
-                className="text-gray-300 text-[16px] mb-[24px] text-medium-responsive"
-                style={{ margin: "0 0 24px 0", lineHeight: "1.4" }}
-              >
-                Please verify your email address using the code below to
-                complete account setup. The one time code is valid for 10
-                minutes.
+              <Text className="text-white text-[14px] font-normal leading-[1.2] mb-[32px] mt-0 heading-responsive">
+                Welcome to {hostName}! Payroll System
               </Text>
 
-              {/* Verification Code */}
-              <div
-                style={{
-                  backgroundColor: "#121212",
-                  borderRadius: "12px",
-                  padding: "24px",
-                  margin: "0 auto 24px auto",
-                  maxWidth: "300px",
-                }}
-              >
-                <Text
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                Hi {userName},
+              </Text>
+
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                You have been added to our payroll system and need to cmplete
+                your payment setup to receive your payments seamlessly.
+              </Text>
+
+              <Text className="text-gray-300  text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                <strong className="text-white">What you need to do:</strong>
+              </Text>
+
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[32px] mt-0 text-medium-responsive">
+                1. Click the button below to access stripe's secure onboarding.{" "}
+                <br />
+                2. Verify your identity and banking information. <br />
+                3. Complete the setup process.
+              </Text>
+
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[40px] mt-0 text-medium-responsive">
+                Looking forward to seeing you there!
+              </Text>
+
+              {/* Sign me up button */}
+              <div className="mb-[40px]">
+                <div
                   style={{
-                    fontSize: "48px",
-                    fontWeight: "normal",
-                    color: "white",
-                    margin: "0",
-                    letterSpacing: "4px",
-                    fontFamily: "monospace",
+                    backgroundColor: "#FFFFFF",
+                    borderRadius: "50px",
+                    padding: "16px 32px",
                     textAlign: "center",
+                    display: "inline-block",
+                    width: "90%",
                   }}
                 >
-                  {otp}
-                </Text>
+                  <Link href={signupLink} style={{ textDecoration: "none" }}>
+                    <Text
+                      style={{
+                        color: "#000000",
+                        fontSize: "16px",
+                        fontWeight: "500",
+                        margin: "0",
+                        lineHeight: "20px",
+                      }}
+                    >
+                      Complete Payment Setup
+                    </Text>
+                  </Link>
+                </div>
               </div>
-
-              <Text
-                className="text-gray-400 text-[14px] mb-[16px] text-small-responsive"
-                style={{ margin: "0 0 16px 0" }}
-              >
-                If you didn't sign up for Avenue, you can safely ignore this
-                email.
-              </Text>
-
-              <Text
-                className="text-gray-500 text-[12px] text-tiny-responsive"
-                style={{ margin: "0" }}
-              >
-                — Avenue Fan Support
+            </Section>
+            {/* notice */}
+            <Section
+              className="text-center mb-[32px] bg-yellow-300/20"
+              style={{
+                border: "1px solid #FFDE21",
+                padding: "16px",
+                borderRadius: "10px",
+              }}
+            >
+              <Text className="text-[14px] text-gray-300 mb-[4px]">
+                <strong className="text-white">Important:</strong> This link
+                expires on {rsvpDeadline}, if you need a new link , contact your
+                organizer.
               </Text>
             </Section>
+
             {/* Help Section */}
             <Section
-              className="bg-[#0A0A0A] rounded-[12px] "
+              className="bg-[#0A0A0A] rounded-[12px] mb-[40px]"
               style={{ border: "1px solid #FFFFFF13" }}
             >
               <div
-                className=" flex items-center gap-[8px] p-3 rounded-t-[12px]"
+                className="flex items-center gap-[8px] p-3 rounded-t-[12px]"
                 style={{
                   borderBottom: "1px solid #FFFFFF13",
                   backgroundColor: "#101010",
@@ -358,6 +371,17 @@ const WelcomeEmail = (props: any) => {
                 </Row>
               </div>
             </Section>
+
+            {/* Contact */}
+            <Section className="text-center mb-[32px]">
+              <Text className="text-[14px] text-gray-600 mb-[4px]">
+                Questions? Contact us at {contactEmail}
+              </Text>
+              <Text className="text-[14px] text-gray-600 mb-[0px]">
+                Phone: +91 98765 43210
+              </Text>
+            </Section>
+
             {/* Footer */}
             <Section className="text-center pt-[40px]">
               <table style={{ margin: "0 auto", padding: 0 }}>
@@ -440,21 +464,20 @@ const WelcomeEmail = (props: any) => {
   );
 };
 
-WelcomeEmail.PreviewProps = {
-  attendeeName: "John Doe",
-  eventName: "Tech Conference 2024",
-  eventDate: "December 15, 2024",
-  eventTime: "9:00 AM - 6:00 PM IST",
-  venue: "Convention Center, Sector 17, Chandigarh",
-  ticketNumber: "TC2024-001234",
-  orderNumber: "ORD-789456123",
-  ticketType: "Premium Pass",
-  purchaseDate: "November 20, 2024",
-  totalAmount: "₹2,500",
-  otp: "90991",
-  organizerName: "Tech Conference Team",
-  eventWebsite: "www.techconference2024.com",
-  socialHandle: "@TechConf2024",
+CompletePayment.PreviewProps = {
+  userName: "Nathan",
+  eventName: "After Hours Neon",
+  eventDate: "Jan 7th, 2025",
+  eventTime: "10:00 AM - 6:00 PM IST",
+  eventLocation: "Chandigarh Convention Center, Punjab",
+  eventDescription:
+    "Join us for an exclusive after hours event with neon lights and great music.",
+  signupLink: "https://avenue.com/signup",
+  eventDetailsLink: "https://avenue.com/details",
+  hostName: "Avenue Events",
+  contactEmail: "help@avenue.events",
+  eventImage: "https://new.email/static/app/placeholder.png",
+  rsvpDeadline: "January 5, 2025",
 };
 
-export default WelcomeEmail;
+export default CompletePayment;

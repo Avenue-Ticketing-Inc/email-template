@@ -15,6 +15,7 @@ const emailTitles = {
   "ticket-confirmation": "Ticket Confirmation Email",
   "verify-email": "Verify Email",
   "welcome-mail": "Welcome Email",
+  "complete-payment": "complete payment",
 };
 
 const availableTemplates = Object.keys(emailTitles);

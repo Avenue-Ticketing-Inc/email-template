@@ -15,6 +15,7 @@ import TicketCancellationEmail from "../../../components/emails/ticket-cancellat
 import TicketConfirmationEmail from "../../../components/emails/ticket-confirmation";
 import VerifyEmailAddress from "../../../components/emails/verify-email";
 import WelcomeEmail from "../../../components/emails/welcome-mail";
+import CompletePayment from "@/components/emails/complete-payment";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -29,6 +30,7 @@ const emailComponents = {
   "ticket-confirmation": TicketConfirmationEmail,
   "verify-email": VerifyEmailAddress,
   "welcome-mail": WelcomeEmail,
+  "complete-payment": CompletePayment,
 };
 
 const emailTitles = {
@@ -44,6 +46,7 @@ const emailTitles = {
   "ticket-confirmation": "Ticket Confirmation Email",
   "verify-email": "Verify Email",
   "welcome-mail": "Welcome Email",
+  "complete-payment": "complete payment",
 };
 
 // Sample props for each email type
@@ -169,6 +172,15 @@ const sampleProps = {
     eventName: "Sample Event",
     companyName: "Sample Company",
     supportEmail: "support@example.com",
+  },
+  "complete-payment": {
+    employeeName: "John Doe",
+    companyName: "Tech Solutions Ltd.",
+    paymentDate: "June 30, 2024",
+    paymentAmount: "₹50,000",
+    paymentMethod: "Bank Transfer",
+    payrollPortalLink: "https://techsolutions.com/payroll",
+    supportEmail: "hey@avenueticket.com",
   },
 };
 
