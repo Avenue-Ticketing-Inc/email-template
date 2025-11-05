@@ -67,6 +67,11 @@ export default function Home() {
       slug: "complete-payment",
       description: "Welcome to the payroll system",
     },
+    {
+      name: "Onboarding Mail",
+      slug: "onboarding-mail",
+      description: "Onboarding mail",
+    },
   ];
 
   return (

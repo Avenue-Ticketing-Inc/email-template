@@ -16,6 +16,7 @@ const emailTitles = {
   "verify-email": "Verify Email",
   "welcome-mail": "Welcome Email",
   "complete-payment": "complete payment",
+  "onboarding-mail": "onboarding mail",
 };
 
 const availableTemplates = Object.keys(emailTitles);

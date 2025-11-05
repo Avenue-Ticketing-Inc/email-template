@@ -15,6 +15,7 @@ import TicketConfirmationEmail from "../../../components/emails/ticket-confirmat
 import VerifyEmailAddress from "../../../components/emails/verify-email";
 import WelcomeEmail from "../../../components/emails/welcome-mail";
 import CompletePayment from "@/components/emails/complete-payment";
+import OnboardingEmail from "@/components/emails/onboarding-email";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -30,6 +31,7 @@ const emailComponents = {
   "verify-email": VerifyEmailAddress,
   "welcome-mail": WelcomeEmail,
   "complete-payment": CompletePayment,
+  "onboarding-mail": OnboardingEmail,
 };
 
 // Sample props for each email type
@@ -69,6 +71,21 @@ const sampleProps = {
     organizerName: "Tech Conference Team",
     eventWebsite: "www.techconference2024.com",
     socialHandle: "@TechConf2024",
+  },
+  "onboarding-mail": {
+    userName: "Nathan",
+    eventName: "After Hours Neon",
+    eventDate: "Jan 7th, 2025",
+    eventTime: "10:00 AM - 6:00 PM IST",
+    eventLocation: "Chandigarh Convention Center, Punjab",
+    eventDescription:
+      "Join us for an exclusive after hours event with neon lights and great music.",
+    signupLink: "https://avenue.com/signup",
+    eventDetailsLink: "https://avenue.com/details",
+    hostName: "Avenue Events",
+    contactEmail: "help@avenue.events",
+    eventImage: "https://new.email/static/app/placeholder.png",
+    rsvpDeadline: "January 5, 2025",
   },
   // Add default props for other templates
   default: {

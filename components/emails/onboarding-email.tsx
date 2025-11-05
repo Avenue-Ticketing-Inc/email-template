@@ -16,7 +16,7 @@ import {
   Link,
 } from "@react-email/components";
 
-const CompletePayment = (props: any) => {
+const OnboardingEmail = (props: any) => {
   const {
     userName = "John Doe",
     eventName = "Tech Innovation Summit 2024",
@@ -86,35 +86,76 @@ const CompletePayment = (props: any) => {
         `}</style>
       </Head>
       <Preview>
-        We want to see you again! {eventName} - {eventDate}
+        Welcome to {hostName}! Let's get you started
       </Preview>
       <Tailwind>
         <Body className="bg-[#0A0A0A] font-sans py-[40px] px-[20px]">
           <Container className="bg-[#0A0A0A] mx-auto max-w-[600px]">
             <Section
-              className="mb-[40px] flex justify-center w-full"
+              className="mb-[40px] "
+              style={{
+                border: "1px solid #FFFFFF13",
+                padding: "16px",
+                borderRadius: "50px",
+                backgroundColor: "#232323",
+              }}
             >
- 
-                  
+              <Row>
+                <Column style={{ width: "auto", verticalAlign: "middle" }}>
+                  <table style={{ margin: 0, padding: 0 }}>
+                    <tr>
+                      <td
+                        style={{ verticalAlign: "middle", paddingRight: "8px" }}
+                      >
                         <Img
                           src="https://assets.avenueticketing.com/email-template/avenueLogo.png"
                           alt="Avenue logo"
-                          width="170"
-                          height="35"
+                          width="150"
+                          height="25"
                         />
-                     
-               
-               
-   
+                      </td>
+                    </tr>
+                  </table>
+                </Column>
+                <Column style={{ textAlign: "right", verticalAlign: "middle" }}>
+                  <Link
+                    href="https://www.avenueticket.com"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <table style={{ margin: "0 0 0 auto", padding: 0 }}>
+                      <tr>
+                        <td
+                          style={{
+                            verticalAlign: "middle",
+                            paddingRight: "4px",
+                          }}
+                        >
+                          <Img
+                            src="https://assets.avenueticketing.com/email-template/link.png"
+                            alt="Browser icon"
+                            width="16"
+                            height="16"
+                          />
+                        </td>
+                        <td style={{ verticalAlign: "middle" }}>
+                          <Text
+                            className="text-gray-400 text-[14px]"
+                            style={{ lineHeight: "1", margin: "0" }}
+                          >
+                            View in browser
+                          </Text>
+                        </td>
+                      </tr>
+                    </table>
+                  </Link>
+                </Column>
+              </Row>
             </Section>
 
             {/* Main Content */}
             <Section className="mb-[40px]">
-              <Text className="text-white text-[24px] font-normal leading-[1.2]  mt-0 heading-responsive">
-                Complete Your Payment Setup
-              </Text>
-              <Text className="text-white text-[14px] font-normal leading-[1.2] mb-[32px] mt-0 heading-responsive">
-                Welcome to {hostName}! Payroll System
+              <Text className="text-white text-[34px] font-normal leading-[1.2] mb-[32px] mt-0 heading-responsive">
+                Welcome to {hostName}!
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
@@ -122,37 +163,36 @@ const CompletePayment = (props: any) => {
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                You have been added to our payroll system and need to cmplete
-                your payment setup to receive your payments seamlessly.
+                We're thrilled to have you join our community! We're here to help
+                you get started and make the most of your experience with us.
               </Text>
 
-              <Text className="text-gray-300  text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                <strong className="text-white">What you need to do:</strong>
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                <strong className="text-white">Here's what you can do next:</strong>
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[32px] mt-0 text-medium-responsive">
-                1. Click the button below to access stripe's secure onboarding.{" "}
+                1. Complete your profile setup to personalize your experience
                 <br />
-                2. Verify your identity and banking information. <br />
-                3. Complete the setup process.
+                2. Explore our platform and discover all available features
+                <br />
+                3. Get started with your first steps to maximize your benefits
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[40px] mt-0 text-medium-responsive">
-                Looking forward to seeing you there!
+                If you have any questions along the way, our support team is here to help!
               </Text>
 
-              {/* Sign me up button */}
-              <div className="mb-[40px] w-full flex justify-center">
+              {/* Get Started button */}
+              <div className="mb-[40px]">
                 <div
                   style={{
                     backgroundColor: "#FFFFFF",
                     borderRadius: "50px",
                     padding: "16px 32px",
                     textAlign: "center",
-                    alignItems: "center",
-                    justifyContent: "center",
                     display: "inline-block",
-                    width: "full",
+                    width: "90%",
                   }}
                 >
                   <Link href={signupLink} style={{ textDecoration: "none" }}>
@@ -165,30 +205,23 @@ const CompletePayment = (props: any) => {
                         lineHeight: "20px",
                       }}
                     >
-                      Complete Payment Setup
+                      Get Started
                     </Text>
                   </Link>
                 </div>
               </div>
             </Section>
-            {/* notice */}
-            <Section
-              className="text-center mb-[32px] bg-yellow-300/20"
-              style={{
-                border: "1px solid #FFDE21",
-                padding: "16px",
-                borderRadius: "10px",
-              }}
-            >
-              <Text className="text-[14px] text-gray-300 mb-[4px]">
-                <strong className="text-white">Important:</strong> This link
-                expires on {rsvpDeadline}, if you need a new link , contact your
-                organizer.
+
+
+            {/* Contact */}
+            <Section className="text-center mb-[32px]">
+              <Text className="text-[14px] text-gray-600 mb-[4px]">
+                Questions? Contact us at {contactEmail}
+              </Text>
+              <Text className="text-[14px] text-gray-600 mb-[0px]">
+                Phone: +91 98765 43210
               </Text>
             </Section>
-
-
-         
 
             {/* Footer */}
             <Section className="text-center pt-[40px]">
@@ -272,7 +305,7 @@ const CompletePayment = (props: any) => {
   );
 };
 
-CompletePayment.PreviewProps = {
+OnboardingEmail.PreviewProps = {
   userName: "Nathan",
   eventName: "After Hours Neon",
   eventDate: "Jan 7th, 2025",
@@ -280,7 +313,7 @@ CompletePayment.PreviewProps = {
   eventLocation: "Chandigarh Convention Center, Punjab",
   eventDescription:
     "Join us for an exclusive after hours event with neon lights and great music.",
-  signupLink: "https://avenue.com/signup",
+  signupLink: "https://avenue.com/get-started",
   eventDetailsLink: "https://avenue.com/details",
   hostName: "Avenue Events",
   contactEmail: "help@avenue.events",
@@ -288,4 +321,4 @@ CompletePayment.PreviewProps = {
   rsvpDeadline: "January 5, 2025",
 };
 
-export default CompletePayment;
+export default OnboardingEmail;

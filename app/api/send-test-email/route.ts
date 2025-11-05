@@ -16,6 +16,7 @@ import TicketConfirmationEmail from "../../../components/emails/ticket-confirmat
 import VerifyEmailAddress from "../../../components/emails/verify-email";
 import WelcomeEmail from "../../../components/emails/welcome-mail";
 import CompletePayment from "@/components/emails/complete-payment";
+import OnboardingEmail from "@/components/emails/onboarding-email";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -31,6 +32,7 @@ const emailComponents = {
   "verify-email": VerifyEmailAddress,
   "welcome-mail": WelcomeEmail,
   "complete-payment": CompletePayment,
+  "onboarding-mail": OnboardingEmail,
 };
 
 const emailTitles = {
@@ -47,6 +49,7 @@ const emailTitles = {
   "verify-email": "Verify Email",
   "welcome-mail": "Welcome Email",
   "complete-payment": "complete payment",
+  "onboarding-mail": "onboarding mail",
 };
 
 // Sample props for each email type
