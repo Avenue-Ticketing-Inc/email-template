@@ -122,7 +122,7 @@ const CompletePayment = (props: any) => {
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                You have been added to our payroll system and need to cmplete
+                You have been added to our payroll system and need to complete
                 your payment setup to receive your payments seamlessly.
               </Text>
 
@@ -131,14 +131,14 @@ const CompletePayment = (props: any) => {
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[32px] mt-0 text-medium-responsive">
-                1. Click the button below to access stripe's secure onboarding.{" "}
+                1. Click the button below to access Stripe's secure onboarding.{" "}
                 <br />
                 2. Verify your identity and banking information. <br />
                 3. Complete the setup process.
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[40px] mt-0 text-medium-responsive">
-                Looking forward to seeing you there!
+              We look forward to having you onboard!
               </Text>
 
               {/* Sign me up button */}
