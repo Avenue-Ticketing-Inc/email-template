@@ -66,7 +66,7 @@ export const OnboardingEmail = (props: any) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                margin: "0 auto 16px auto",
+                margin: "0 auto 4px auto",
               }}
             >
               <Img
@@ -79,7 +79,7 @@ export const OnboardingEmail = (props: any) => {
             </div>
           
               
-              <Text className="text-[#000000] font-bold text-2xl leading-6 text-center py-[10px]">
+              <Text className="text-[#000000] font-bold text-2xl leading-6 text-center ">
               {mailHeading}
               </Text>
            
