@@ -17,6 +17,7 @@ import VerifyEmailAddress from "../../../components/emails/verify-email";
 import WelcomeEmail from "../../../components/emails/welcome-mail";
 import CompletePayment from "@/components/emails/complete-payment";
 import OnboardingEmail from "@/components/emails/onboarding-email";
+import PaymentSuccessEmail from "@/components/emails/payment-success";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -33,6 +34,7 @@ const emailComponents = {
   "welcome-mail": WelcomeEmail,
   "complete-payment": CompletePayment,
   "onboarding-mail": OnboardingEmail,
+  "payment-success-mail": PaymentSuccessEmail,
 };
 
 const emailTitles = {
@@ -50,6 +52,7 @@ const emailTitles = {
   "welcome-mail": "Welcome Email",
   "complete-payment": "complete payment",
   "onboarding-mail": "onboarding mail",
+  "payment-success-mail": "payment success mail",
 };
 
 // Sample props for each email type
@@ -184,6 +187,13 @@ const sampleProps = {
     paymentMethod: "Bank Transfer",
     payrollPortalLink: "https://techsolutions.com/payroll",
     supportEmail: "hey@avenueticket.com",
+  },
+  "payment-success-mail": {
+    organizerName: "John Doe",
+    formattedAmount: "$200.00",
+    description: "Payroll payment to ",
+    formattedDate: "Nov 6, 2025",
+    employeeName: "Jane Smith",
   },
 };
 

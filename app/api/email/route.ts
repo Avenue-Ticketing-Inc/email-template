@@ -14,8 +14,9 @@ import TicketCancellationEmail from "../../../components/emails/ticket-cancellat
 import TicketConfirmationEmail from "../../../components/emails/ticket-confirmation";
 import VerifyEmailAddress from "../../../components/emails/verify-email";
 import WelcomeEmail from "../../../components/emails/welcome-mail";
-import CompletePayment from "@/components/emails/complete-payment";
+import CompletePayment from "@/components/emails/complete-payment"; 
 import OnboardingEmail from "@/components/emails/onboarding-email";
+import PaymentSuccessEmail from "@/components/emails/payment-success";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -32,6 +33,7 @@ const emailComponents = {
   "welcome-mail": WelcomeEmail,
   "complete-payment": CompletePayment,
   "onboarding-mail": OnboardingEmail,
+  "payment-success-mail": PaymentSuccessEmail,
 };
 
 // Sample props for each email type
@@ -86,6 +88,14 @@ const sampleProps = {
     contactEmail: "help@avenue.events",
     eventImage: "https://new.email/static/app/placeholder.png",
     rsvpDeadline: "January 5, 2025",
+  },
+  "payment-success-mail": {
+    attendeeName: "John Doe",
+    eventName: "Tech Conference 2024",
+    eventDate: "December 15, 2024",
+    eventTime: "9:00 AM - 6:00 PM IST",
+    venue: "Convention Center, Sector 17, Chandigarh",
+    ticketNumber: "TC2024-001234",
   },
   // Add default props for other templates
   default: {

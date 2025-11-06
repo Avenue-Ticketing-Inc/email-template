@@ -18,18 +18,8 @@ import {
 
 const OnboardingEmail = (props: any) => {
   const {
-    userName = "John Doe",
-    eventName = "Tech Innovation Summit 2024",
-    eventDate = "December 15, 2024",
-    eventTime = "10:00 AM - 6:00 PM IST",
-    eventLocation = "Chandigarh Convention Center, Punjab",
-    eventDescription = "Join 500+ tech leaders, innovators, and entrepreneurs for a day of cutting-edge insights, networking, and breakthrough technologies.",
-    signupLink = "https://techsummit2024.com/signup",
-    eventDetailsLink = "https://techsummit2024.com/details",
-    hostName = "Tech Innovation Group",
-    contactEmail = "events@techinnovation.com",
-    eventImage = "https://new.email/static/app/placeholder.png",
-    rsvpDeadline = "December 10, 2024",
+    employeeName = "John Doe",
+    contactEmail = "support@example.com",
   } = props;
 
   return (
@@ -86,130 +76,106 @@ const OnboardingEmail = (props: any) => {
         `}</style>
       </Head>
       <Preview>
-        Welcome to {hostName}! Let's get you started
+        Employee Onboarding Complete - {employeeName} has completed Stripe verification
       </Preview>
       <Tailwind>
         <Body className="bg-[#0A0A0A] font-sans py-[40px] px-[20px]">
           <Container className="bg-[#0A0A0A] mx-auto max-w-[600px]">
-            <Section
-              className="mb-[40px] "
-              style={{
-                border: "1px solid #FFFFFF13",
-                padding: "16px",
-                borderRadius: "50px",
-                backgroundColor: "#232323",
-              }}
+          <Section
+              className="mb-[40px] flex justify-center w-full"
             >
-              <Row>
-                <Column style={{ width: "auto", verticalAlign: "middle" }}>
-                  <table style={{ margin: 0, padding: 0 }}>
-                    <tr>
-                      <td
-                        style={{ verticalAlign: "middle", paddingRight: "8px" }}
-                      >
-                        <Img
+              <div 
+              style={{
+               
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                
+              }}>
+                <Img
                           src="https://assets.avenueticketing.com/email-template/avenueLogo.png"
                           alt="Avenue logo"
-                          width="150"
-                          height="25"
+                          width="170"
+                          height="35"
                         />
-                      </td>
-                    </tr>
-                  </table>
-                </Column>
-                <Column style={{ textAlign: "right", verticalAlign: "middle" }}>
-                  <Link
-                    href="https://www.avenueticket.com"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <table style={{ margin: "0 0 0 auto", padding: 0 }}>
-                      <tr>
-                        <td
-                          style={{
-                            verticalAlign: "middle",
-                            paddingRight: "4px",
-                          }}
-                        >
-                          <Img
-                            src="https://assets.avenueticketing.com/email-template/link.png"
-                            alt="Browser icon"
-                            width="16"
-                            height="16"
-                          />
-                        </td>
-                        <td style={{ verticalAlign: "middle" }}>
-                          <Text
-                            className="text-gray-400 text-[14px]"
-                            style={{ lineHeight: "1", margin: "0" }}
-                          >
-                            View in browser
-                          </Text>
-                        </td>
-                      </tr>
-                    </table>
-                  </Link>
-                </Column>
-              </Row>
+                        </div>
+                        
             </Section>
+                            {/* Thank You Banner */}
+            <Section
+              className="bg-[#10B981] rounded-[12px] mb-[16px] text-center"
+              style={{ padding: "20px" }}
+            >
+              <div
+                className="thank-you-icon"
+                style={{
+                  width: "50px",
+                  height: "50px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 16px auto",
+                }}
+              >
+                <Img
+                  src="https://assets.avenueticketing.com/email-template/circle-check.png"
+                  alt="Checkmark icon"
+                  width="50"
+                  height="50"
+                  style={{ display: "block" }}
+                />
+              </div>
+              <Text
+                className="text-large-responsive"
+                style={{
+                  fontSize: "24px",
+                  fontWeight: "bold",
+                  color: "black",
+                  margin: "0 0 8px 0",
+                }}
+              >
+                               Employee Onboarding Complete
 
+              </Text>
+              <Text
+                className="text-medium-responsive"
+                style={{
+                  fontSize: "16px",
+                  color: "black",
+                  opacity: "0.7",
+                  margin: "0",
+                }}
+              >
+                Your employee has completed Stripe verification
+              </Text>
+            </Section>
+            
             {/* Main Content */}
             <Section className="mb-[40px]">
-              <Text className="text-white text-[34px] font-normal leading-[1.2] mb-[32px] mt-0 heading-responsive">
-                Welcome to {hostName}!
+            
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                Great news! One of your payroll employees has successfully completed their Stripe onboarding and is now ready to receive payments.
+              </Text>
+
+              <Text className="text-white text-[18px] font-semibold leading-[1.6] mb-[20px] mt-0 text-large-responsive">
+                {employeeName}
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                Hi {userName},
-              </Text>
-
-              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                We're thrilled to have you join our community! We're here to help
-                you get started and make the most of your experience with us.
-              </Text>
-
-              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
-                <strong className="text-white">Here's what you can do next:</strong>
-              </Text>
-
-              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[32px] mt-0 text-medium-responsive">
-                1. Complete your profile setup to personalize your experience
-                <br />
-                2. Explore our platform and discover all available features
-                <br />
-                3. Get started with your first steps to maximize your benefits
+                This employee can now receive payroll payments through your system.
               </Text>
 
               <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[40px] mt-0 text-medium-responsive">
-                If you have any questions along the way, our support team is here to help!
+                You can now process payroll payments for this employee. They will receive notifications when payments are processed.
               </Text>
 
-              {/* Get Started button */}
-              <div className="mb-[40px]">
-                <div
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "50px",
-                    padding: "16px 32px",
-                    textAlign: "center",
-                    display: "inline-block",
-                    width: "90%",
-                  }}
-                >
-                  <Link href={signupLink} style={{ textDecoration: "none" }}>
-                    <Text
-                      style={{
-                        color: "#000000",
-                        fontSize: "16px",
-                        fontWeight: "500",
-                        margin: "0",
-                        lineHeight: "20px",
-                      }}
-                    >
-                      Get Started
-                    </Text>
-                  </Link>
-                </div>
-              </div>
+              <Text className="text-gray-300 text-[16px] leading-[1.6] mb-[20px] mt-0 text-medium-responsive">
+                If you have any questions, please contact support.
+              </Text>
+
+              <Text className="text-gray-400 text-[14px] leading-[1.6] mb-[0px] mt-0 text-small-responsive">
+                This is an automated message. Please do not reply to this email.
+              </Text>
             </Section>
 
 
@@ -306,19 +272,8 @@ const OnboardingEmail = (props: any) => {
 };
 
 OnboardingEmail.PreviewProps = {
-  userName: "Nathan",
-  eventName: "After Hours Neon",
-  eventDate: "Jan 7th, 2025",
-  eventTime: "10:00 AM - 6:00 PM IST",
-  eventLocation: "Chandigarh Convention Center, Punjab",
-  eventDescription:
-    "Join us for an exclusive after hours event with neon lights and great music.",
-  signupLink: "https://avenue.com/get-started",
-  eventDetailsLink: "https://avenue.com/details",
-  hostName: "Avenue Events",
-  contactEmail: "help@avenue.events",
-  eventImage: "https://new.email/static/app/placeholder.png",
-  rsvpDeadline: "January 5, 2025",
+  employeeName: "Nathan Smith",
+  contactEmail: "support@example.com",
 };
 
 export default OnboardingEmail;

@@ -68,7 +68,12 @@ export default function Home() {
       description: "Welcome to the payroll system",
     },
     {
-      name: "Onboarding Mail",
+      name: "Payment Success",
+      slug: "payment-success-mail",
+      description: "Payment confirmation with ticket details",
+    },
+    {
+      name: "Employee Onboarding Mail",
       slug: "onboarding-mail",
       description: "Onboarding mail",
     },
