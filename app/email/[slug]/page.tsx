@@ -18,6 +18,9 @@ const emailTitles = {
   "complete-payment": "complete payment",
   "onboarding-mail": "onboarding mail",
   "payment-success-mail": "payment success mail",
+  "onboarding-link": "Complete Your Payment Setup",
+  "successful-onboarded": "Employee Onboarding Complete",
+  "payroll-paid": "Payment Received",
 };
 
 const availableTemplates = Object.keys(emailTitles);

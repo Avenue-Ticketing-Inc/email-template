@@ -17,6 +17,9 @@ import WelcomeEmail from "../../../components/emails/welcome-mail";
 import CompletePayment from "@/components/emails/complete-payment"; 
 import OnboardingEmail from "@/components/emails/onboarding-email";
 import PaymentSuccessEmail from "@/components/emails/payment-success";
+import OnboardingLinkEmail from "@/components/emails/onboarding-link-email";
+import SuccessfulOnboardedEmail from "@/components/emails/successful-onboarded-email";
+import PayrollPaidEmail from "@/components/emails/payroll-paid-email";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -34,6 +37,9 @@ const emailComponents = {
   "complete-payment": CompletePayment,
   "onboarding-mail": OnboardingEmail,
   "payment-success-mail": PaymentSuccessEmail,
+  "onboarding-link": OnboardingLinkEmail,
+  "successful-onboarded": SuccessfulOnboardedEmail,
+  "payroll-paid": PayrollPaidEmail,
 };
 
 // Sample props for each email type
@@ -96,6 +102,24 @@ const sampleProps = {
     eventTime: "9:00 AM - 6:00 PM IST",
     venue: "Convention Center, Sector 17, Chandigarh",
     ticketNumber: "TC2024-001234",
+  },
+  "onboarding-link": {
+    employeeName: "Jane Smith",
+    onboardingLink: "https://stripe.com/onboarding",
+    expiresAt: "Dec 31, 2025",
+    organizerName: "John Doe",
+  },
+  "successful-onboarded": {
+    organizerName: "John Doe",
+    employeeName: "Jane Smith",
+  },
+  "payroll-paid": {
+    organizerName: "John Doe",
+    formattedAmount: "$200.00",
+    description: "Payroll payment",
+    transactionUrl: "https://stripe.com/transaction",
+    formattedDate: "Nov 6, 2025",
+    employeeName: "Jane Smith",
   },
   // Add default props for other templates
   default: {

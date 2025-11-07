@@ -18,6 +18,9 @@ import WelcomeEmail from "../../../components/emails/welcome-mail";
 import CompletePayment from "@/components/emails/complete-payment";
 import OnboardingEmail from "@/components/emails/onboarding-email";
 import PaymentSuccessEmail from "@/components/emails/payment-success";
+import OnboardingLinkEmail from "@/components/emails/onboarding-link-email";
+import SuccessfulOnboardedEmail from "@/components/emails/successful-onboarded-email";
+import PayrollPaidEmail from "@/components/emails/payroll-paid-email";
 
 const emailComponents = {
   "early-access": PreSaleEarlyAccessEmail,
@@ -35,6 +38,9 @@ const emailComponents = {
   "complete-payment": CompletePayment,
   "onboarding-mail": OnboardingEmail,
   "payment-success-mail": PaymentSuccessEmail,
+  "onboarding-link": OnboardingLinkEmail,
+  "successful-onboarded": SuccessfulOnboardedEmail,
+  "payroll-paid": PayrollPaidEmail,
 };
 
 const emailTitles = {
@@ -53,6 +59,9 @@ const emailTitles = {
   "complete-payment": "complete payment",
   "onboarding-mail": "onboarding mail",
   "payment-success-mail": "payment success mail",
+  "onboarding-link": "Complete Your Payment Setup",
+  "successful-onboarded": "Employee Onboarding Complete",
+  "payroll-paid": "Payment Received",
 };
 
 // Sample props for each email type
@@ -192,6 +201,24 @@ const sampleProps = {
     organizerName: "John Doe",
     formattedAmount: "$200.00",
     description: "Payroll payment to ",
+    formattedDate: "Nov 6, 2025",
+    employeeName: "Jane Smith",
+  },
+  "onboarding-link": {
+    employeeName: "Jane Smith",
+    onboardingLink: "https://stripe.com/onboarding",
+    expiresAt: "Dec 31, 2025",
+    organizerName: "John Doe",
+  },
+  "successful-onboarded": {
+    organizerName: "John Doe",
+    employeeName: "Jane Smith",
+  },
+  "payroll-paid": {
+    organizerName: "John Doe",
+    formattedAmount: "$200.00",
+    description: "Payroll payment",
+    transactionUrl: "https://stripe.com/transaction",
     formattedDate: "Nov 6, 2025",
     employeeName: "Jane Smith",
   },

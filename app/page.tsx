@@ -77,6 +77,21 @@ export default function Home() {
       slug: "onboarding-mail",
       description: "Onboarding mail",
     },
+    {
+      name: "Onboarding Link",
+      slug: "onboarding-link",
+      description: "Complete your payment setup",
+    },
+    {
+      name: "Successful Onboarded",
+      slug: "successful-onboarded",
+      description: "Employee onboarding complete notification",
+    },
+    {
+      name: "Payroll Paid",
+      slug: "payroll-paid",
+      description: "Payment received notification",
+    },
   ];
 
   return (
