@@ -109,68 +109,28 @@ const TicketConfirmationEmail = (props: any) => {
         Your ticket for {eventName} is confirmed! Event details inside.
       </Preview>
       <Tailwind>
-        <Body className="bg-[#0A0A0A] font-sans py-[40px] px-[20px]">
-          <Container className="bg-[#0A0A0A] mx-auto max-w-[600px]">
-            <Section
-              className="mb-[40px] "
-              style={{
-                border: "1px solid #FFFFFF13",
-                padding: "16px",
-                borderRadius: "50px",
-                backgroundColor: "#232323",
-              }}
-            >
-              <Row>
-                <Column style={{ width: "auto", verticalAlign: "middle" }}>
-                  <table style={{ margin: 0, padding: 0 }}>
-                    <tr>
-                      <td
-                        style={{ verticalAlign: "middle", paddingRight: "8px" }}
-                      >
-                        <Img
-                          src="https://assets.avenueticketing.com/email-template/avenueLogo.png"
-                          alt="Avenue logo"
-                          width="150"
-                          height="25"
-                        />
-                      </td>
-                    </tr>
-                  </table>
-                </Column>
-                <Column style={{ textAlign: "right", verticalAlign: "middle" }}>
-                  <Link
-                    href="https://www.avenueticket.com"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <table style={{ margin: "0 0 0 auto", padding: 0 }}>
-                      <tr>
-                        <td
-                          style={{
-                            verticalAlign: "middle",
-                            paddingRight: "4px",
-                          }}
-                        >
-                          <Img
-                            src="https://assets.avenueticketing.com/email-template/link.png"
-                            alt="Browser icon"
-                            width="16"
-                            height="16"
-                          />
-                        </td>
-                        <td style={{ verticalAlign: "middle" }}>
-                          <Text
-                            className="text-gray-400 text-[14px]"
-                            style={{ lineHeight: "1", margin: "0" }}
-                          >
-                            View in browser
-                          </Text>
-                        </td>
-                      </tr>
-                    </table>
-                  </Link>
-                </Column>
-              </Row>
-            </Section>
+        <Body className="bg-[#ffffff] font-sans py-[40px] px-[20px]">
+          <Container className="bg-[#ffffff] mx-auto max-w-[600px]">
+          <Section>
+          <div
+                className="thank-you-icon"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 20px auto",
+                }}
+              >
+                <Img
+                  src="https://assets.avenueticketing.com/email-template/avenueLogoDark.png"
+                  width="150"
+                  height="30"
+                  alt="avenue logo"
+                />
+              </div>
+
+              <Hr className="border-[#e6ebf1] my-5" />
+          </Section>
             {/* Thank You Banner */}
             <Section
               className="bg-[#10B981] rounded-[12px] mb-[16px] text-center"
@@ -219,7 +179,7 @@ const TicketConfirmationEmail = (props: any) => {
               </Text>
             </Section>
             {/* Event Card */}
-            <Section className="bg-[#121212] border border-[#FFFFFF13] rounded-[12px] mb-[24px] overflow-hidden">
+            <Section className="bg-[#ececec80] border border-[#FFFFFF13] rounded-[12px] mb-[24px] overflow-hidden">
               {/* Event Image */}
               <div style={{ padding: "8px" }}>
                 <Img
@@ -239,7 +199,7 @@ const TicketConfirmationEmail = (props: any) => {
 
               <div className="p-[20px]">
                 {/* Event Title */}
-                <Text className="text-white text-[24px] font-bold mb-[16px] text-large-responsive">
+                <Text className="text-black text-[24px] font-bold mb-[16px] text-large-responsive">
                   {eventName}
                 </Text>
 
@@ -255,7 +215,7 @@ const TicketConfirmationEmail = (props: any) => {
                       style={{ verticalAlign: "middle", paddingRight: "8px" }}
                     >
                       <Img
-                        src="https://assets.avenueticketing.com/email-template/calendar-1.png"
+                        src="https://assets.avenueticketing.com/email-template/calendar.png"
                         alt="Calendar icon"
                         width="16"
                         height="16"
@@ -282,7 +242,7 @@ const TicketConfirmationEmail = (props: any) => {
                   <tr>
                     <td style={{ verticalAlign: "top", paddingRight: "8px" }}>
                       <Img
-                        src="https://assets.avenueticketing.com/email-template/map.png"
+                        src="https://assets.avenueticketing.com/email-template/location.png"
                         alt="Location icon"
                         width="16"
                         height="16"
@@ -325,7 +285,7 @@ const TicketConfirmationEmail = (props: any) => {
                         style={{ verticalAlign: "middle", paddingRight: "8px" }}
                       >
                         <Img
-                          src="https://assets.avenueticketing.com/email-template/ticket.png"
+                          src="https://assets.avenueticketing.com/email-template/Frame.png"
                           alt="Ticket icon"
                           width="16"
                           height="16"
@@ -468,31 +428,31 @@ const TicketConfirmationEmail = (props: any) => {
             </Section>
             {/* Order Summary */}
             <Section
-              className="bg-[#000000] rounded-[12px] mb-[24px]"
+              className="bg-[#ececec80] rounded-[12px] mb-[24px]"
               style={{ border: "1px solid #FFFFFF13" }}
             >
               <div
                 className="flex items-center gap-[8px] p-3 rounded-t-[12px]"
                 style={{
                   borderBottom: "1px solid #FFFFFF13",
-                  backgroundColor: "#121212",
+                  backgroundColor: "#ececec90",
                 }}
               >
                 <Img
-                  src="https://assets.avenueticketing.com/email-template/options.png"
+                  src="https://assets.avenueticketing.com/email-template/menu.png"
                   alt="Order summary icon"
                   width="20"
                   height="20"
                   className="inline-block"
                 />
-                <Text className="text-white text-[18px] font-semibold m-0 text-large-responsive">
+                <Text className="text-black text-[18px] font-semibold m-0 text-large-responsive">
                   Order summary
                 </Text>
               </div>
               <div className="p-3">
                 {/* Order ID */}
                 <div className="mb-[16px]">
-                  <Text className="text-white text-[16px] font-medium mb-[4px] text-medium-responsive">
+                  <Text className="text-black text-[16px] font-medium mb-[4px] text-medium-responsive">
                     Order
                   </Text>
                   <Text className="text-gray-400 text-[14px] text-small-responsive">
@@ -504,7 +464,7 @@ const TicketConfirmationEmail = (props: any) => {
                 <Row>
                   {/* Purchase Column */}
                   <Column className="w-[50%] pr-2">
-                    <Text className="text-white text-[16px] font-medium mb-[8px] text-medium-responsive">
+                    <Text className="text-black text-[16px] font-medium mb-[8px] text-medium-responsive">
                       Purchase
                     </Text>
                     <Text className="text-gray-400 text-[14px] mb-[4px] text-small-responsive">
@@ -517,7 +477,7 @@ const TicketConfirmationEmail = (props: any) => {
 
                   {/* Billing Column */}
                   <Column className="w-[50%] pl-2">
-                    <Text className="text-white text-[16px] font-medium mb-[8px] text-medium-responsive">
+                    <Text className="text-black text-[16px] font-medium mb-[8px] text-medium-responsive">
                       Billing
                     </Text>
                     <Text className="text-gray-400 text-[14px] mb-[4px] text-small-responsive">
@@ -538,24 +498,24 @@ const TicketConfirmationEmail = (props: any) => {
             </Section>{" "}
             {/* Your Order */}
             <Section
-              className="bg-[#000000] rounded-[12px] mb-[24px]"
+              className="bg-[#ececec80] rounded-[12px] mb-[24px]"
               style={{ border: "1px solid #FFFFFF13" }}
             >
               <div
                 className="flex items-center gap-[8px] p-3 rounded-t-[12px]"
                 style={{
                   borderBottom: "1px solid #FFFFFF13",
-                  backgroundColor: "#101010",
+                  backgroundColor: "#ececec90",
                 }}
               >
                 <Img
-                  src="https://assets.avenueticketing.com/email-template/lock.png"
+                  src="https://assets.avenueticketing.com/email-template/locked.png"
                   alt="Your order icon"
                   width="20"
                   height="20"
                   className="inline-block"
                 />
-                <Text className="text-white text-[18px] font-semibold m-0 text-large-responsive">
+                <Text className="text-black text-[18px] font-semibold m-0 text-large-responsive">
                   Your Order
                 </Text>
               </div>
@@ -621,14 +581,14 @@ const TicketConfirmationEmail = (props: any) => {
                                 }}
                               >
                                 <Img
-                                  src="https://assets.avenueticketing.com/email-template/ticket.png"
+                                  src="https://assets.avenueticketing.com/email-template/Frame.png"
                                   alt="Ticket icon"
                                   width="16"
                                   height="16"
                                 />
                               </td>
                               <td style={{ verticalAlign: "middle" }}>
-                                <Text className="text-white text-[16px] font-medium text-medium-responsive">
+                                <Text className="text-gray-500 text-[16px] font-medium text-medium-responsive">
                                   {ticket.type}
                                 </Text>
                               </td>
@@ -642,7 +602,7 @@ const TicketConfirmationEmail = (props: any) => {
                             verticalAlign: "middle",
                           }}
                         >
-                          <Text className="text-white text-[16px] text-medium-responsive my-1">
+                          <Text className="text-gray-500 text-[16px] text-medium-responsive my-1">
                             {ticket.row}
                           </Text>
                         </td>
@@ -653,7 +613,7 @@ const TicketConfirmationEmail = (props: any) => {
                             verticalAlign: "middle",
                           }}
                         >
-                          <Text className="text-white text-[16px] text-medium-responsive my-1">
+                          <Text className="text-gray-500 text-[16px] text-medium-responsive my-1">
                             {ticket.seat}
                           </Text>
                         </td>
@@ -664,7 +624,7 @@ const TicketConfirmationEmail = (props: any) => {
                             verticalAlign: "middle",
                           }}
                         >
-                          <Text className="text-white text-[16px] text-medium-responsive my-1">
+                          <Text className="text-gray-500 text-[16px] text-medium-responsive my-1">
                             {ticket.price}
                           </Text>
                         </td>
@@ -672,148 +632,6 @@ const TicketConfirmationEmail = (props: any) => {
                     </table>
                   </div>
                 ))}
-              </div>
-            </Section>
-            {/* Help Section */}
-            <Section
-              className="bg-[#0A0A0A] rounded-[12px] "
-              style={{ border: "1px solid #FFFFFF13" }}
-            >
-              <div
-                className=" flex items-center gap-[8px] p-3 rounded-t-[12px]"
-                style={{
-                  borderBottom: "1px solid #FFFFFF13",
-                  backgroundColor: "#101010",
-                }}
-              >
-                <Img
-                  src="https://assets.avenueticketing.com/email-template/help.png"
-                  alt="Help icon"
-                  width="20"
-                  height="20"
-                  className="inline-block"
-                />
-                <Text className="text-white text-[18px] font-semibold m-0 text-large-responsive">
-                  Need Help?
-                </Text>
-              </div>
-              <div className="p-3">
-                <Text className="text-white text-[16px] font-semibold mb-[4px] mt-[16px] text-medium-responsive">
-                  We are here for you
-                </Text>
-                <Text className="text-gray-400 text-[14px] mb-[24px] mt-0 text-small-responsive">
-                  Reach out to us over email or phone 24/7
-                </Text>
-
-                <Row className="contact-row">
-                  <Column className="w-[50%] pr-[10px] contact-column">
-                    <Text className="text-white text-[14px] mb-[8px] mt-0 text-small-responsive">
-                      Phone number
-                    </Text>
-                    <div
-                      style={{
-                        border: "1px solid #FFFFFF13",
-                        borderRadius: "25px",
-                        padding: "12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <table style={{ width: "100%", margin: 0, padding: 0 }}>
-                        <tr>
-                          <td
-                            style={{
-                              textAlign: "center",
-                              verticalAlign: "middle",
-                            }}
-                          >
-                            <table
-                              style={{
-                                margin: "0 auto",
-                                padding: 0,
-                                borderSpacing: "0 0",
-                              }}
-                            >
-                              <tr>
-                                <td
-                                  style={{
-                                    verticalAlign: "middle",
-                                    paddingRight: "8px",
-                                  }}
-                                >
-                                  <Img
-                                    src="https://assets.avenueticketing.com/email-template/Flag.png"
-                                    alt="Phone icon"
-                                    width="16"
-                                    height="16"
-                                  />
-                                </td>
-                                <td style={{ verticalAlign: "middle" }}>
-                                  <Text className="text-white text-[15px] m-0 text-small-responsive">
-                                    (555) 987 654
-                                  </Text>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </Column>
-
-                  <Column className="w-[50%] pl-[10px] contact-column">
-                    <Text className="text-white text-[14px] mb-[8px] mt-0 text-small-responsive">
-                      Email Address
-                    </Text>
-                    <div
-                      style={{
-                        border: "1px solid #FFFFFF13",
-                        borderRadius: "25px",
-                        padding: "12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <table style={{ width: "100%", margin: 0, padding: 0 }}>
-                        <tr>
-                          <td
-                            style={{
-                              textAlign: "center",
-                              verticalAlign: "middle",
-                            }}
-                          >
-                            <table
-                              style={{
-                                margin: "0 auto",
-                                padding: 0,
-                                borderSpacing: "0 0",
-                              }}
-                            >
-                              <tr>
-                                <td
-                                  style={{
-                                    verticalAlign: "middle",
-                                    paddingRight: "8px",
-                                  }}
-                                >
-                                  <Img
-                                    src="https://assets.avenueticketing.com/email-template/mail.png"
-                                    alt="Email icon"
-                                    width="16"
-                                    height="16"
-                                  />
-                                </td>
-                                <td style={{ verticalAlign: "middle" }}>
-                                  <Text className="text-white text-[15px] m-0 text-small-responsive">
-                                    help@avenue.events
-                                  </Text>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </Column>
-                </Row>
               </div>
             </Section>
             {/* QR Code Section */}
@@ -829,7 +647,7 @@ const TicketConfirmationEmail = (props: any) => {
               {/* Wallet Buttons */}
               <div className="mt-[16px]">
                 <div
-                  className="bg-[#000000] rounded-[50px] p-[16px] mb-[8px] text-center"
+                  className="bg-[#ececec80] rounded-[50px] p-[16px] mb-[8px] text-center"
                   style={{ border: "1px solid #FFFFFF13" }}
                 >
                   <table style={{ width: "100%", margin: 0, padding: 0 }}>
@@ -855,14 +673,14 @@ const TicketConfirmationEmail = (props: any) => {
                               }}
                             >
                               <Img
-                                src="https://assets.avenueticketing.com/email-template/apple.png"
+                                src="https://assets.avenueticketing.com/email-template/appleDark.png"
                                 alt="Apple Wallet icon"
                                 width="20"
                                 height="20"
                               />
                             </td>
                             <td style={{ verticalAlign: "middle" }}>
-                              <Text className="text-white text-[16px] font-medium m-0 text-medium-responsive">
+                              <Text className="text-black text-[16px] font-medium m-0 text-medium-responsive">
                                 Add to Apple Wallet
                               </Text>
                             </td>
@@ -874,7 +692,7 @@ const TicketConfirmationEmail = (props: any) => {
                 </div>
 
                 <div
-                  className="bg-[#000000] rounded-[50px] p-[16px] text-center"
+                  className="bg-[#ececec80] rounded-[50px] p-[16px] text-center"
                   style={{ border: "1px solid #FFFFFF13" }}
                 >
                   <table style={{ width: "100%", margin: 0, padding: 0 }}>
@@ -900,14 +718,14 @@ const TicketConfirmationEmail = (props: any) => {
                               }}
                             >
                               <Img
-                                src="https://assets.avenueticketing.com/email-template/google.png"
+                                src="https://assets.avenueticketing.com/email-template/googleDark.png"
                                 alt="Google Wallet icon"
                                 width="20"
                                 height="20"
                               />
                             </td>
                             <td style={{ verticalAlign: "middle" }}>
-                              <Text className="text-white text-[16px] font-medium m-0 text-medium-responsive">
+                              <Text className="text-black text-[16px] font-medium m-0 text-medium-responsive">
                                 Add to Google Wallet
                               </Text>
                             </td>
@@ -925,7 +743,7 @@ const TicketConfirmationEmail = (props: any) => {
                 <tr>
                   <td style={{ verticalAlign: "middle", paddingRight: "8px" }}>
                     <Img
-                      src="https://assets.avenueticketing.com/email-template/avenueLogo.png"
+                      src="https://assets.avenueticketing.com/email-template/avenueLogoDark.png"
                       alt="Avenue logo"
                       width="150"
                       height="25"
@@ -950,7 +768,7 @@ const TicketConfirmationEmail = (props: any) => {
                         style={{ textDecoration: "none" }}
                       >
                         <Img
-                          src="https://assets.avenueticketing.com/email-template/instagram.png"
+                          src="https://assets.avenueticketing.com/email-template/instaDark.png"
                           alt="Instagram"
                           width="24"
                           height="24"
@@ -963,7 +781,7 @@ const TicketConfirmationEmail = (props: any) => {
                         style={{ textDecoration: "none" }}
                       >
                         <Img
-                          src="https://assets.avenueticketing.com/email-template/facebook.png"
+                          src="https://assets.avenueticketing.com/email-template/facebookDark.png"
                           alt="Facebook"
                           width="24"
                           height="24"
@@ -976,7 +794,7 @@ const TicketConfirmationEmail = (props: any) => {
                         style={{ textDecoration: "none" }}
                       >
                         <Img
-                          src="https://assets.avenueticketing.com/email-template/twitter.png"
+                          src="https://assets.avenueticketing.com/email-template/twitterDark.png"
                           alt="Twitter"
                           width="20"
                           height="20"

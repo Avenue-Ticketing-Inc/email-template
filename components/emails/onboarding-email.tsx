@@ -47,7 +47,7 @@ export const OnboardingEmail = (props: any) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-               
+                margin: "0 auto 0 auto",
         
               }}
             > <Img
